@@ -4,6 +4,7 @@ GITPATH="$HOME/solas-automation"
 
 while true; do
   echo "$(date '+%Y-%m-%d %H:%M:%S') – Process check started" >> $LOGFILE
+  bash $GITPATH/process_ping.sh >> $LOGFILE 2>&1
 
   # Her legges dine oppgaver:
   bash $GITPATH/tasks/run_all.sh >> $LOGFILE 2>&1
